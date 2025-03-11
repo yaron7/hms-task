@@ -1,46 +1,95 @@
-# Getting Started with Create React App
+# HMS Task Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-stack web application built with React (TypeScript) for the frontend and Node.js (Express) with MySQL for the backend.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User authentication (Login & Registration)
+- MySQL database with a connection pool
+- RESTful API using Express
+- Frontend built with React and TypeScript
+- Tailwind CSS for styling
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+.vscode/
+backend/
+  ├── app.js         # Main server file
+  ├── db.js          # Database connection and setup
+public/
+src/
+  ├── components/    # React components
+  ├── services/      # API service calls
+  ├── types/         # TypeScript type definitions
+  ├── App.tsx        # Main React component
+  ├── index.tsx      # React entry point
+.env                 # Environment variables
+.env.template        # Template for env variables
+.gitignore           # Git ignore file
+package.json        # Dependencies and scripts
+package-lock.json   # Locked dependency versions
+README.md           # Project documentation
+tailwind.config.js  # Tailwind CSS configuration
+tsconfig.json       # TypeScript configuration
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (LTS recommended)
+- MySQL database
 
-### `npm run build`
+### Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo.git
+   cd hms-task
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Configure environment variables:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - Copy `.env.template` to `.env` and update the values.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the backend:
+   ```sh
+   cd backend
+   node app.js
+   ```
+5. Start the frontend:
+   ```sh
+   npm start
+   ```
 
-### `npm run eject`
+## API Routes
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- `POST /login` - User login
+- `POST /register` - User registration
+- `GET /users` - Fetch all users (protected route)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Frontend:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- React (TypeScript)
+- Tailwind CSS
+- React Hook Form & Yup
 
-## Learn More
+### Backend:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Node.js (Express)
+- MySQL (mysql2 package)
+- dotenv
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
+
+Feel free to fork and contribute to the project. Pull requests are welcome!
+
+## License
+
+This project is licensed under the MIT License.
